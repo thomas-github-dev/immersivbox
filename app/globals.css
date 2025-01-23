@@ -15,6 +15,19 @@
   .h3 {
     @apply text-[18px] xl:text-[24px] leading-[1.1] font-semibold;
   }
+
+  li {
+    list-style: none;
+    font-size: 17px;
+  }
+
+  li:before {
+    content: "·";
+    font-size: 120px;
+    vertical-align: top;
+    line-height: 40px;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;

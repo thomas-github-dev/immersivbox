@@ -4,15 +4,23 @@ import Image from "next/image";
 import Nav from "@/components/Nav";
 
 import MobileNav from "./MobileNav";
-
+import { usePathname } from "next/navigation";
 const Header = () => {
+  const pathname = usePathname();
+
   return (
-    <header className="py-3 xl:py-5 text-textprinc ">
+    <header
+      className={` ${
+        "/immersivbox" === pathname && "bg-transparent absolute z-10 "
+      } ${
+        "/" === pathname && "bg-white/80 absolute z-10 "
+      }  py-3 xl:py-5 text-textprinc h-[80px] w-full`}
+    >
       <div className=" mx-auto flex justify-between items-center ">
         <Link href="/" className="justify-self-start ml-5">
           <Image
             src="/AssetSABOXBLUE.png"
-            alt="Immersive Box"
+            alt="Immersive Box demo"
             width={0}
             height={0}
             sizes="100vw"
