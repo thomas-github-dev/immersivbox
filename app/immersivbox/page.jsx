@@ -321,6 +321,36 @@ const Contact = () => {
               );
             })}
           </div>
+          <div
+            key="info_tablette_appel"
+            className="absolute top-[420px] w-[1400px] left-[50%] translate-x-[-97%] text-sm  inline-flex flex-wrap justify-center content-center items-center align-middle border-1 border-black "
+          >
+            <div
+              key="oipoipo"
+              className="flex flex-col  gap-3  justify-start content-center items-center align-top w-[215px] h-[295px]"
+            >
+              <div className=" block content-center items-center justify-center text-center h-[60px] mt-2">
+                <img
+                  src="/schedule.png"
+                  alt="ag g"
+                  style={{
+                    width: "60px",
+                    height: "60px",
+                  }}
+                />
+              </div>
+              <div className="flex flex-1 flex-col gap-3 text-center mt-2 w-[140px]">
+                <span className="text-accent text-[15px] font-bold">
+                  APPEL OU PRISE DE RENDEZ-VOUS
+                </span>
+
+                <span className="text-accent text-[13px]  ">
+                  Contactez directement le promoteur ou planifiez un rendez-vous
+                  en un clic.
+                </span>
+              </div>
+            </div>
+          </div>
 
           <div className="w-full bg-black/80 mb-0 bottom-[0px] absolute">
             <div className="left-[50%] relative translate-x-[-50%] inline-block p-5 text-left">
