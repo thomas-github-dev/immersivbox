@@ -47,8 +47,8 @@ export default function Page() {
       }}
       className="div_parent"
     >
-      <div className="absolute top-30 left-0 b-0 r-0 w-full h-full bg-white xl:p-1 border-[10px] border-t-[20px] rounded-[18px] xl:border-[40px] xl:rounded-[48px] border-black ">
-        <div className="bouton_close absolute top-[-20px] xl:top-[-40px] right-[0px] h-10 text-center text-white z-30 opacity-0">
+      <div className="absolute top-30 left-0 b-0 r-0 w-full h-full bg-white xl:p-1 border-[15px] border-t-[30px] rounded-[18px] xl:border-[40px] xl:rounded-[48px] border-black ">
+        <div className="bouton_close absolute top-[-35px] xl:top-[-40px] right-[0px] h-10 text-center text-white z-30 opacity-0">
           <a
             href="#"
             onClick={(e) => {
@@ -58,7 +58,7 @@ export default function Page() {
             <IoIosArrowDropdownCircle className="m-auto" size="2.5em" />
           </a>
         </div>
-        <div className="bouton_up absolute top-[-20px] xl:top-[-40px] right-[0px] h-10 text-center text-white z-30 ">
+        <div className="bouton_up absolute top-[-35px] xl:top-[-40px] right-[0px] h-10 text-center text-white z-30 ">
           <a
             href="#"
             onClick={(e) => {
@@ -69,10 +69,9 @@ export default function Page() {
           </a>
         </div>
 
-        <div className="absolute top-[-28px] left-0 w-full h-10 text-center">
+        <div className="absolute top-[-34px] left-0 w-full h-10 text-center">
           <span className="text-xs text-white xl:hidden animate-pulse">
-            Ceci est la version mobile de la tablette accessible par vos client
-            sur leurs smartphones
+            Ceci est la version mobile de la tablette accessible sur smartphone
           </span>
         </div>
         <iframe

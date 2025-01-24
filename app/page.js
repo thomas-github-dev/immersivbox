@@ -22,7 +22,7 @@ export default function Home() {
           ></Image>
         </Link>
       </div>
-      <div className="absolute hidden xl:block top-[565px] left-[50%] translate-x-[11%] text-accent w-[191px]  ">
+      <div className="absolute hidden xxl:block top-[565px] left-[50%] translate-x-[11%] text-accent w-[191px]  ">
         <Image
           src="/accueil_line.png"
           alt="decoration"
@@ -30,7 +30,7 @@ export default function Home() {
           height={102}
         ></Image>
       </div>
-      <div className="absolute top-[590px] text-center xl:text-left xl:top-[648px] left-[50%] translate-x-[-50%] xl:translate-x-[42%]">
+      <div className="absolute top-[590px] text-center xxl:text-left xxl:top-[648px] left-[50%] translate-x-[-50%] xxl:translate-x-[42%]">
         <div className="environment"></div>
         <h2
           className="typo steve_glitch layers second text-[21px] "

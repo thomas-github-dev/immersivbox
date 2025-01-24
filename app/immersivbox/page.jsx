@@ -152,7 +152,7 @@ const Contact = () => {
               &nbsp;&nbsp;BOX NOIR
             </div>
           </div>
-          <div className="relative w-[90%] mx-auto xl:absolute xl:left-[50%] xl:translate-x-[-20%] xl:top-[325px] xl:w-[950px] flex-1 order-2 xl:order-none text-center xl:text-left pr-3 ">
+          <div className="relative w-[90%] mx-auto xl:absolute xl:left-[50%] xl:translate-x-[-30%] xxl:translate-x-[-20%] xl:top-[325px] xl:w-[950px] flex-1 order-2 xl:order-none text-center xl:text-left pr-3 ">
             {info_tablette.map((inf, index) => {
               return (
                 <div
@@ -238,7 +238,7 @@ const Contact = () => {
           </div>
 
           <div className="relative w-full bg-black/80 xl:mb-0 mt-10 xl:mt-0 xl:bottom-[0px] xl:absolute">
-            <div className="left-[50%] relative translate-x-[-50%] inline-block p-20 text-center xl:text-left">
+            <div className="left-[50%] relative translate-x-[-50%] inline-block py-10 xl:py-10 xxl:py-20 text-center xl:text-left">
               <h2 className="text-white text-[30px] leading-[50px] uppercase ">
                 En quoi cela fait la différence pour vous ?
               </h2>
@@ -284,8 +284,8 @@ const Contact = () => {
           >
             CONTACTEZ-NOUS POUR BOOSTER VOS VENTES
           </div>
-          <div className="relative text-center w-full flex justify-center mt-8 mb-8 xl:mb-0 xl:mt-0 xl:absolute xl:top-[480px] xl:left-[50%] xl:translate-x-[-330%] text-accent xl:w-[149px] ">
-            <a href="/fond_decouvrez_02.jpg" target="_blank">
+          <div className="relative text-center w-full flex justify-center mt-8 mb-8 xl:mb-0 xl:mt-0 xl:absolute xl:top-[480px] xl:left-[50%] xl:translate-x-[-330%] text-accent xl:w-[149px] z-50">
+            <a href="/contact">
               <Image
                 src="/decouvrez_demande_plaquette.png"
                 width={149}
