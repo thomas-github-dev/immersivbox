@@ -24,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={inter.variable}>
+      <body className={inter.variable + " " + roboto.variable}>
         <Header />
         <PageTransition>{children}</PageTransition>
         <Footer />

@@ -124,14 +124,14 @@ const Contact = () => {
         >
           <div className="absolute top-0 left-0 right-0 bottom-0 bg-white xl:hidden z-0"></div>
 
-          <div className="absolute top-[730px] left-[50%] xxl:translate-x-[-290%] xl:translate-x-[-250%] text-accent text-[18px] ">
+          <div className="hidden absolute top-[730px] left-[50%] xxl:translate-x-[-290%] xl:translate-x-[-250%] xl:block xxl:block text-accent text-[18px] ">
             A PARTIR DE 500 € HT / MOIS
           </div>
           <div
             key="change_color"
-            className="absolute top-[550px] w-[190px] left-[50%] translate-x-[-240%] text-accent text-[16px] flex flex-col gap-4 "
+            className="hidden absolute top-[550px] w-[190px] left-[50%] translate-x-[-240%] text-accent text-[16px]  xl:flex xxl:flex flex-col gap-4 "
           >
-            <div className="flex flex-row content-center items-center justify-start  text-center">
+            <div className=" flex flex-row content-center items-center justify-start  text-center">
               <button
                 className="  bg-white hover:border-0 w-[40px] h-[40px] border-accent border-1"
                 onClick={(e) => {

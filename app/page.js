@@ -33,7 +33,7 @@ export default function Home() {
       <div className="absolute top-[590px] text-center xxl:text-left xxl:top-[648px] left-[50%] translate-x-[-50%] xxl:translate-x-[42%]">
         <div className="environment"></div>
         <h2
-          className="typo steve_glitch layers second text-[21px] "
+          className="typo steve_glitch layers font-second text-[21px] font-thin "
           data-text="DECOUVREZ L'IMMERSIVBOX"
         >
           <span>DECOUVREZ L'IMMERSIVBOX</span>

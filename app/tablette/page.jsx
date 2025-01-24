@@ -75,7 +75,7 @@ export default function Page() {
           </span>
         </div>
         <iframe
-          src="https://projexion3d.fr/tablette/SAGEC_CAPBRETON"
+          src="https://projexion3d.fr/tablette/DEMO"
           className="w-full h-full z-10"
         />
       </div>
