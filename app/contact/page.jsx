@@ -142,7 +142,7 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button size="" className="max-w-40" type="submit">
+                  <Button size="" className="max-w-60 ml-auto" type="submit">
                     Envoi message
                   </Button>
                 </form>

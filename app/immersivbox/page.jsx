@@ -124,7 +124,7 @@ const Contact = () => {
         >
           <div className="absolute top-0 left-0 right-0 bottom-0 bg-white xl:hidden z-0"></div>
 
-          <div className="absolute top-[730px] left-[50%] translate-x-[-290%] text-accent text-[18px] ">
+          <div className="absolute top-[730px] left-[50%] xxl:translate-x-[-290%] xl:translate-x-[-250%] text-accent text-[18px] ">
             A PARTIR DE 500 € HT / MOIS
           </div>
           <div
