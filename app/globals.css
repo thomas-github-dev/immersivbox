@@ -22,7 +22,7 @@
     display: inline-block;
     color: #666;
     z-index: 2;
-    letter-spacing: 10px;
+    letter-spacing: 3px;
 
     filter: drop-shadow(0 1px 1px);
   }

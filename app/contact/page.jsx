@@ -55,9 +55,9 @@ const Contact = () => {
       }}
       className=""
     >
-      <div className="w-full  overflow-x-hidden">
+      <div className="w-full xl:top-0 overflow-x-hidden">
         <div
-          className="relative bg-top bg-cover bg-no-repeat overflow-x-hidden"
+          className="relative  bg-top  xl:bg-cover bg-no-repeat  overflow-x-hidden mt-20 xl:mt-0 "
           style={{
             backgroundImage: `url('/fond_contact.png')`,
           }}
@@ -78,7 +78,7 @@ const Contact = () => {
               <div className="flex-1 align-middle justify-center content-center items-center">
                 <Image
                   src="/commerciale.jpg"
-                  alt="l'equipe"
+                  alt="l'equipe commerciale"
                   width={0}
                   height={0}
                   sizes="100vw"
@@ -150,7 +150,10 @@ const Contact = () => {
                   <ul className="flex flex-col gap-6">
                     {info.map((inf, index) => {
                       return (
-                        <li key={index} className="flex items-center gap-5">
+                        <li
+                          key={index + "_456456132"}
+                          className="flex items-center gap-5"
+                        >
                           <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-accent text-white rounded-md flex items-center justify-center">
                             <div>{inf.icon}</div>
                           </div>

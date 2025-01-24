@@ -17,13 +17,16 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "Immersive Box",
+  title: "ImmersivBox",
   description: "",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
+      <head>
+        <link rel="icon" href="./favicon.ico" sizes="any" />
+      </head>
       <body className={inter.variable + " " + roboto.variable}>
         <Header />
         <PageTransition>{children}</PageTransition>

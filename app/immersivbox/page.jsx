@@ -165,7 +165,7 @@ const Contact = () => {
                   >
                     <img
                       src={inf.img}
-                      alt="agg"
+                      alt="image info importante"
                       style={{
                         width: "60px",
                         height: "60px",
@@ -243,21 +243,21 @@ const Contact = () => {
                 En quoi cela fait la différence pour vous ?
               </h2>
               <ul className="text-white text-[12px] list-disc leading-[50px] inline-block ">
-                <li className="immersivbox">
+                <li key="1" className="immersivbox">
                   <span className="text-[22px] font-bold">
                     Accélération du processus de vente
                   </span>{" "}
                   : Une visibilité constante qui{" "}
                   <b>multiplie les opportunités</b>.
                 </li>
-                <li className="immersivbox">
+                <li key="2" className="immersivbox">
                   <span className="text-[22px] font-bold">
                     Optimisation des ressources
                   </span>
                   : Une solution autonome qui <b>allège</b> la présence sur site
                   de votre <b>équipe commerciale</b>.
                 </li>
-                <li className="immersivbox">
+                <li key="3" className="immersivbox">
                   <span className="text-[22px] font-bold">
                     Image moderne et différenciante
                   </span>
@@ -308,14 +308,17 @@ const Contact = () => {
                     <div className=" block content-center items-center justify-center text-center h-[60px] mt-2">
                       <img
                         src={inf.img}
-                        alt="ag g"
+                        alt="image info"
                         style={{
                           width: "60px",
                           height: "60px",
                         }}
                       />
                     </div>
-                    <div className="flex flex-1 flex-col gap-3 text-center mt-2 w-[200px]">
+                    <div
+                      className="flex flex-1 flex-col gap-3 text-center mt-2 w-[200px]"
+                      key={index + "_35666"}
+                    >
                       <span className="text-accent text-[15px] font-bold">
                         {inf.title}
                       </span>
@@ -327,7 +330,7 @@ const Contact = () => {
                   </div>
                   {(index == 0 || index == 2) && (
                     <div
-                      key={index + "_line"}
+                      key={index + "_line_1"}
                       className="h-[2px] bg-accent/75 w-[200px] mt-[-50px] hidden xl:block"
                     ></div>
                   )}
@@ -375,16 +378,16 @@ const Contact = () => {
           <div className="w-full bg-black/80 relative mt-5 xl:mt-0 xl:mb-0 xl:bottom-[0px] xl:absolute">
             <div className="left-[50%] relative translate-x-[-50%] inline-block p-5 text-left">
               <ul className="text-white text-[12px] list-disc leading-[40px]">
-                <li className="immersivbox">
+                <li key="11" className="immersivbox">
                   ImmersivBox une <b>solution immersive et autonome</b> qui
                   révolutionne la présentation immobilière.
                 </li>
-                <li className="immersivbox">
+                <li key="12" className="immersivbox">
                   Conçue pour les <b>promoteurs et les acquéreurs</b>, cette box
                   interactive permet de <b>visualiser et d’explorer</b> les
                   projets immobiliers comme si vous y étiez.
                 </li>
-                <li className="immersivbox">
+                <li key="13" className="immersivbox">
                   Alliant <b>technologie de pointe et simplicité</b>,
                   ImmersivBox crée une expérience{" "}
                   <b>captivante et engageante</b>.

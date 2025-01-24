@@ -11,7 +11,8 @@ const Header = () => {
   return (
     <header
       className={` ${
-        "/immersivbox" === pathname && "bg-transparent absolute z-10 "
+        ("/immersivbox" === pathname || "/contact" === pathname) &&
+        "bg-transparent absolute z-10 "
       } ${
         "/" === pathname && "bg-white/80 absolute z-10 "
       }  py-3 xl:py-5 text-textprinc h-[80px] w-full`}
