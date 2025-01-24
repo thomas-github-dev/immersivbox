@@ -13,7 +13,7 @@ export default function Home() {
       }}
     >
       <div className="absolute top-[520px] left-[50%] translate-x-[-50%] text-accent w-[55px] animate-pulse ">
-        <Link href="/immersivbox" target="_blank">
+        <Link href="/immersivbox">
           <Image
             src="/accueil_croix.png"
             width={55}
@@ -22,13 +22,22 @@ export default function Home() {
           ></Image>
         </Link>
       </div>
-      <div className="absolute top-[523px] left-[50%]  text-accent w-[102px]  ">
+      <div className="absolute hidden xl:block top-[565px] left-[50%] translate-x-[11%] text-accent w-[191px]  ">
         <Image
           src="/accueil_line.png"
           alt="decoration"
           width={191}
           height={102}
         ></Image>
+      </div>
+      <div className="absolute top-[590px] text-center xl:text-left xl:top-[648px] left-[50%] translate-x-[-50%] xl:translate-x-[42%]">
+        <div className="environment"></div>
+        <h2
+          className="typo steve_glitch layers second text-[21px] "
+          data-text="DECOUVREZ L'IMMERSIVBOX"
+        >
+          <span>DECOUVREZ L'IMMERSIVBOX</span>
+        </h2>
       </div>
     </div>
   );

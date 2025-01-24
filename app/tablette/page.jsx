@@ -9,14 +9,30 @@ export default function Page() {
     if (sens == "top") {
       animate([
         [".div_parent", { marginTop: -80 }, { duration: 0.5, delay: 0.05 }],
-        [".bouton_up", { opacity: 0 }, { duration: 0.5, delay: 0.05 }],
-        [".bouton_close", { opacity: 1 }, { duration: 0.1, delay: 0.05 }],
+        [
+          ".bouton_up",
+          { opacity: 0, zIndex: 0 },
+          { duration: 0.5, delay: 0.05 },
+        ],
+        [
+          ".bouton_close",
+          { opacity: 1, zIndex: 30 },
+          { duration: 0.1, delay: 0.05 },
+        ],
       ]);
     } else {
       animate([
         [".div_parent", { marginTop: 0 }, { duration: 0.5, delay: 0.05 }],
-        [".bouton_close", { opacity: 0 }, { duration: 0.5, delay: 0.05 }],
-        [".bouton_up", { opacity: 1 }, { duration: 0.1, delay: 0.05 }],
+        [
+          ".bouton_close",
+          { opacity: 0, zIndex: 0 },
+          { duration: 0.5, delay: 0.05 },
+        ],
+        [
+          ".bouton_up",
+          { opacity: 1, zIndex: 30 },
+          { duration: 0.1, delay: 0.05 },
+        ],
       ]);
     }
   }
@@ -31,8 +47,8 @@ export default function Page() {
       }}
       className="div_parent"
     >
-      <div className="absolute top-30 left-0 b-0 r-0 w-full h-full bg-white xl:p-1 border-[10px] border-t-[20px] rounded-[18px] xl:border-[40px] xl:rounded-[48px] border-black">
-        <div className="bouton_close absolute top-[-40px] right-[40px] h-10 text-center text-white z-30 opacity-0">
+      <div className="absolute top-30 left-0 b-0 r-0 w-full h-full bg-white xl:p-1 border-[10px] border-t-[20px] rounded-[18px] xl:border-[40px] xl:rounded-[48px] border-black ">
+        <div className="bouton_close absolute top-[-20px] xl:top-[-40px] right-[0px] h-10 text-center text-white z-30 opacity-0">
           <a
             href="#"
             onClick={(e) => {
@@ -42,7 +58,7 @@ export default function Page() {
             <IoIosArrowDropdownCircle className="m-auto" size="2.5em" />
           </a>
         </div>
-        <div className="bouton_up absolute top-[-40px] right-[0] h-10 text-center text-white z-30 ">
+        <div className="bouton_up absolute top-[-20px] xl:top-[-40px] right-[0px] h-10 text-center text-white z-30 ">
           <a
             href="#"
             onClick={(e) => {
@@ -61,7 +77,7 @@ export default function Page() {
         </div>
         <iframe
           src="https://projexion3d.fr/tablette/SAGEC_CAPBRETON"
-          className="w-full h-full"
+          className="w-full h-full z-10"
         />
       </div>
     </motion.div>

@@ -22,6 +22,7 @@ module.exports = {
       },
       fontFamily: {
         primary: "var(--font-inter)",
+        second: "var(--font-roboto)",
       },
       colors: {
         textprinc: "#000",

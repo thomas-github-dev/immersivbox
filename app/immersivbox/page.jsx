@@ -101,13 +101,29 @@ const Contact = () => {
       }}
       className=""
     >
-      <div className="w-full  overflow-x-hidden">
+      <div className="w-full top-20 xl:top-0 overflow-x-hidden">
+        <div className="relative mt-20 w-full text-accent xl:hidden text-center text-[35px] font-bold p-5">
+          <h1>IMMERSIVBOX</h1>
+          <h2 className="text-[25px] font-normal">
+            une solution immersive et autonome qui révolutionne la présentation
+            immobilière
+          </h2>
+        </div>
+        <div className="relative mx-auto w-full  xl:hidden flex justify-center">
+          <Image src="/immersivBox_BLACK.jpg" width={255} height={481}></Image>
+        </div>
+        <div className="relative mt-2 w-full text-accent xl:hidden text-center text-[20px] font-bold p-5">
+          A PARTIR DE 500 € HT / MOIS
+        </div>
+
         <div
-          className="relative bg-top bg-cover bg-no-repeat h-[1344px] overflow-x-hidden"
           style={{
             backgroundImage: `url('${url_box}')`,
           }}
+          className="relative bg-top  xl:bg-cover bg-no-repeat xl:h-[1344px] overflow-x-hidden xl:mt-0 "
         >
+          <div className="absolute top-0 left-0 right-0 bottom-0 bg-white xl:hidden z-0"></div>
+
           <div className="absolute top-[730px] left-[50%] translate-x-[-290%] text-accent text-[18px] ">
             A PARTIR DE 500 € HT / MOIS
           </div>
@@ -136,7 +152,7 @@ const Contact = () => {
               &nbsp;&nbsp;BOX NOIR
             </div>
           </div>
-          <div className="absolute left-[50%] translate-x-[-20%] top-[325px] w-[950px] flex-1 order-2 xl:order-none text-center xl:text-left pr-3 ">
+          <div className="relative w-[90%] mx-auto xl:absolute xl:left-[50%] xl:translate-x-[-20%] xl:top-[325px] xl:w-[950px] flex-1 order-2 xl:order-none text-center xl:text-left pr-3 ">
             {info_tablette.map((inf, index) => {
               return (
                 <div
@@ -221,27 +237,27 @@ const Contact = () => {
             })}
           </div>
 
-          <div className="w-full bg-black/80 mb-0 bottom-[0px] absolute">
-            <div className="left-[50%] relative translate-x-[-50%] inline-block p-20 text-left">
+          <div className="relative w-full bg-black/80 xl:mb-0 mt-10 xl:mt-0 xl:bottom-[0px] xl:absolute">
+            <div className="left-[50%] relative translate-x-[-50%] inline-block p-20 text-center xl:text-left">
               <h2 className="text-white text-[30px] leading-[50px] uppercase ">
                 En quoi cela fait la différence pour vous ?
               </h2>
-              <ul className="text-white text-[12px] list-disc leading-[50px] inline-block">
-                <li>
+              <ul className="text-white text-[12px] list-disc leading-[50px] inline-block ">
+                <li className="immersivbox">
                   <span className="text-[22px] font-bold">
                     Accélération du processus de vente
                   </span>{" "}
                   : Une visibilité constante qui{" "}
                   <b>multiplie les opportunités</b>.
                 </li>
-                <li>
+                <li className="immersivbox">
                   <span className="text-[22px] font-bold">
                     Optimisation des ressources
                   </span>
                   : Une solution autonome qui <b>allège</b> la présence sur site
                   de votre <b>équipe commerciale</b>.
                 </li>
-                <li>
+                <li className="immersivbox">
                   <span className="text-[22px] font-bold">
                     Image moderne et différenciante
                   </span>
@@ -256,18 +272,19 @@ const Contact = () => {
 
         <div
           key="decouv"
-          className="bg-top bg-cover bg-no-repeat h-[928px] overflow-hidden relative"
+          className="bg-top xl:bg-cover bg-no-repeat xl:h-[928px] overflow-hidden relative  xl:mt-0 "
           style={{
             backgroundImage: `url('/fond_decouvrez_02.jpg')`,
           }}
         >
+          <div className="absolute top-0 left-0 right-0 bottom-0 bg-white xl:hidden z-0"></div>
           <div
             key="title"
-            className="absolute top-[10px] left-[50px]   text-accent text-[30px] text-center"
+            className="relative xl:absolute xl:top-[10px] xl:left-[50px] mt-5 xl:mt-0  text-accent text-[25px] xl:text-[30px] text-center"
           >
             CONTACTEZ-NOUS POUR BOOSTER VOS VENTES
           </div>
-          <div className="absolute top-[480px] left-[50%] translate-x-[-330%] text-accent w-[149px] ">
+          <div className="relative text-center w-full flex justify-center mt-8 mb-8 xl:mb-0 xl:mt-0 xl:absolute xl:top-[480px] xl:left-[50%] xl:translate-x-[-330%] text-accent xl:w-[149px] ">
             <a href="/fond_decouvrez_02.jpg" target="_blank">
               <Image
                 src="/decouvrez_demande_plaquette.png"
@@ -279,14 +296,14 @@ const Contact = () => {
 
           <div
             key="info_tablette"
-            className="absolute top-[240px] w-[1400px] left-[50%] translate-x-[-22%] text-sm  inline-flex flex-wrap justify-center content-center items-center align-middle border-1 border-black "
+            className="relative  xl:absolute xl:top-[240px] w-full xl:w-[1400px] xl:left-[50%] xl:translate-x-[-22%] text-sm flex-col xl:flex-row inline-flex flex-wrap justify-center content-center items-center align-middle border-1 border-black "
           >
             {info_tablette_end.map((inf, index) => {
               return (
                 <>
                   <div
                     key={index + "_35656"}
-                    className="flex flex-col  gap-3  justify-start content-center items-center align-top w-[295px] h-[295px] border-accent/75 border-2 p-5 rounded-[50%] mt-[-50px]"
+                    className="flex flex-col  gap-3  justify-start content-center items-center align-top w-[295px] h-[295px] border-accent/75 border-2 p-5 rounded-[50%] mt-5 xl:mt-[-50px]"
                   >
                     <div className=" block content-center items-center justify-center text-center h-[60px] mt-2">
                       <img
@@ -311,11 +328,14 @@ const Contact = () => {
                   {(index == 0 || index == 2) && (
                     <div
                       key={index + "_line"}
-                      className="h-[2px] bg-accent/75 w-[200px] mt-[-50px]"
+                      className="h-[2px] bg-accent/75 w-[200px] mt-[-50px] hidden xl:block"
                     ></div>
                   )}
                   {index == 1 && (
-                    <div key={index + "_line"} className="w-[500px] "></div>
+                    <div
+                      key={index + "_line"}
+                      className="w-[500px] hidden xl:block"
+                    ></div>
                   )}
                 </>
               );
@@ -352,19 +372,19 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="w-full bg-black/80 mb-0 bottom-[0px] absolute">
+          <div className="w-full bg-black/80 relative mt-5 xl:mt-0 xl:mb-0 xl:bottom-[0px] xl:absolute">
             <div className="left-[50%] relative translate-x-[-50%] inline-block p-5 text-left">
               <ul className="text-white text-[12px] list-disc leading-[40px]">
-                <li>
+                <li className="immersivbox">
                   ImmersivBox une <b>solution immersive et autonome</b> qui
                   révolutionne la présentation immobilière.
                 </li>
-                <li>
+                <li className="immersivbox">
                   Conçue pour les <b>promoteurs et les acquéreurs</b>, cette box
                   interactive permet de <b>visualiser et d’explorer</b> les
                   projets immobiliers comme si vous y étiez.
                 </li>
-                <li>
+                <li className="immersivbox">
                   Alliant <b>technologie de pointe et simplicité</b>,
                   ImmersivBox crée une expérience{" "}
                   <b>captivante et engageante</b>.
