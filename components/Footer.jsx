@@ -7,7 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { GrInstagram } from "react-icons/gr";
 export default function Footer() {
   const pathname = usePathname();
-  if (pathname == "/tablette") return null;
+  if (pathname.startsWith("/tablette")) return null;
   else
     return (
       <footer className="bg-gray-800 text-white p-8 ">

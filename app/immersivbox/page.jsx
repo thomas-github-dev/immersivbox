@@ -101,8 +101,8 @@ const Contact = () => {
       }}
       className=""
     >
-      <div className="w-full top-20 xl:top-0 overflow-x-hidden">
-        <div className="relative mt-20 w-full text-accent xl:hidden text-center text-[35px] font-bold p-5">
+      <div className="w-full top-0 ">
+        <div className="relative mt-2 w-full text-accent xl:hidden text-center text-[35px] font-bold p-5">
           <h1>IMMERSIVBOX</h1>
           <h2 className="text-[25px] font-normal">
             une solution immersive et autonome qui révolutionne la présentation
@@ -120,7 +120,7 @@ const Contact = () => {
           style={{
             backgroundImage: `url('${url_box}')`,
           }}
-          className="relative bg-top  xl:bg-cover bg-no-repeat xl:h-[1344px] overflow-x-hidden xl:mt-0 "
+          className="relative bg-top  xl:bg-cover bg-no-repeat xl:h-[1344px]  xl:mt-0 "
         >
           <div className="absolute top-0 left-0 right-0 bottom-0 bg-white xl:hidden z-0"></div>
 
@@ -408,7 +408,60 @@ const Contact = () => {
             REJOIGNEZ-NOUS
           </div>
 
-          <div className="h-[364px] w-[361px] absolute top-[258px] left-[50%] translate-x-[-50%]">
+          <div
+            key="info_tablette_FAQ"
+            className="relative p-10 xl:p-0 xl:absolute top-[150px] w-full  xl:w-[400px] xxl:w-[500px] left-[50%] translate-x-[-50%] xl:translate-x-[-150%] xxl:translate-x-[-150%] text-sm  "
+          >
+            <h2 className="text-[30px]">FAQ - ImmersivBox</h2>
+            <br />
+            <b> Comment fonctionne l’ImmersivBox ?</b>
+            <br />
+            L'ImmersivBox est une solution autonome et prête à l'emploi. Elle
+            est équipée d'une tablette tactile intégrée, permettant une
+            navigation fluide et intuitive. Les informations sont mises à jour
+            en temps réel pour un suivi optimal.
+            <br />
+            <br />
+            <b> Quels types de contenus peut-on intégrer ?</b> <br />
+            L'ImmersivBox supporte une variété de contenus : vidéos immersives,
+            maquettes 3D, visuels, et présentations interactives, entièrement
+            adaptés à vos projets spécifiques.
+            <br />
+            <br />
+            <b>Où peut-on l’installer ?</b>
+            <br />
+            Elle peut être installée sur vos chantiers, lors de salons ou dans
+            tout lieu stratégique disposant d'une alimentation électrique.
+            <br />
+            <br />
+            <b>Peut-on personnaliser l’ImmersivBox ?</b>
+            <br />
+            Absolument ! Tout est personnalisable : contenu, interface
+            utilisateur et branding, pour correspondre parfaitement à votre
+            image.
+            <br />
+            <br />
+            <b>Quelles sont les dimensions de l’ImmersivBox ?</b>
+            <br />
+            Dimensions : 112 x 112 x 224 cm
+            <br />
+            Surface au sol : 1,25 m²
+            <br />
+            <br />
+            <b>Est-il possible de louer l’ImmersivBox ?</b>
+            <br />
+            Oui, nous proposons une option de leasing disponible à partir de 6
+            mois.
+            <br />
+            <br />
+            <b>Quelles sont les options de support ?</b>
+            <br />
+            Nous offrons une assistance technique et une formation complète pour
+            garantir une utilisation optimale.
+            <br />
+          </div>
+
+          <div className="hidden xl:block h-[364px] w-[361px] absolute top-[258px] left-[50%] translate-x-[-50%]">
             <div
               style={{
                 backgroundImage: `url(${images[currentImage].url})`,

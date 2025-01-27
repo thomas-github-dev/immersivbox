@@ -57,13 +57,13 @@ const Contact = () => {
     >
       <div className="w-full xl:top-0 overflow-x-hidden">
         <div
-          className="relative  bg-top  xl:bg-cover bg-no-repeat  overflow-x-hidden mt-20 xl:mt-0 "
+          className="relative  bg-top  xl:bg-cover bg-no-repeat  overflow-x-hidden mt-2 xl:mt-0 "
           style={{
             backgroundImage: `url('/fond_contact.png')`,
           }}
         >
           <div className="absolute top-0 left-0 right-0 bottom-0 bg-white xl:hidden z-0"></div>
-          <div className="relative container mx-auto mb-10 mt-10 xl:mt-[110px] z-10">
+          <div className="relative container mx-auto mb-10 mt-2 xl:mt-[110px] z-10">
             <div className="flex flex-col gap-3 xl:mb-10 pb-10 align-middle justify-center content-center items-center mx-auto text-center">
               <h1 className=" text-accent text-[35px] xl:text-[50px]">
                 Réservez votre ImmersivBox
