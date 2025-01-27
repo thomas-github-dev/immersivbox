@@ -1,6 +1,0 @@
-{
-  "/contact/page": "app/contact/page.js",
-  "/tablette/page": "app/tablette/page.js",
-  "/immersivbox/page": "app/immersivbox/page.js",
-  "/page": "app/page.js"
-}
