@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import Wait from "@/components/Wait";
 
 const info = [
   {
@@ -22,29 +24,36 @@ const info = [
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [retourMail, setRetourMail] = useState("");
+  const [wait, setWait] = useState(false);
+
   async function handleSubmit(event) {
+    setWait(true);
     event.preventDefault();
     const formData = new FormData(event.target);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "post",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://projexion3d.fr/tablette/api/contact",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: formData,
+        }
+      );
 
-      if (!response.ok) {
-        console.log("falling over");
-        throw new Error(`response status: ${response.status}`);
-      }
-      const responseData = await response.json();
-      console.log(responseData["message"]);
-
-      alert("Message successfully sent");
+      setRetourMail("Votre message a bien été envoyé");
+      setWait(false);
     } catch (err) {
-      console.error(err);
-      alert("Error, please try resubmitting the form");
+      setRetourMail("Une erreur est survenue, veuillez réessayer");
+      setWait(false);
     }
   }
+  useEffect(() => {
+    setTimeout(() => {
+      setRetourMail("");
+    }, 5000);
+  }, [retourMail]);
 
   return (
     <motion.div
@@ -87,10 +96,18 @@ const Contact = () => {
                 />
               </div>
               <div className="xl:h-[54%] flex-1 order-2 xl:order-none">
+                {wait && <Wait />}
                 <form
                   className="flex flex-col gap-6 mb-5 "
                   onSubmit={handleSubmit}
+                  key={retourMail}
                 >
+                  {retourMail && retourMail != "" && (
+                    <span className="text-[var(--main-button-alert)] text-center text-3xl">
+                      {retourMail}
+                    </span>
+                  )}
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="grid w-full max-w-sm items-center gap-1.5 text-accent">
                       <Label htmlFor="email">Prénom</Label>
@@ -132,6 +149,7 @@ const Contact = () => {
                         placeholder="Votre numéro de téléphone"
                       />
                     </div>
+                    <input type="hidden" name="id_client" value="SAGEC_TEST" />
                   </div>
                   <div className="grid w-full  items-center gap-1.5 text-accent">
                     <Label htmlFor="email">Message</Label>
