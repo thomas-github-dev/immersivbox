@@ -28,7 +28,7 @@ const MobileNav = () => {
         <CiMenuBurger className="text-[32px] text-accent mr-5" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
-        <nav className="flex flex-col justify-center items-center gap-8 mt-20">
+        <nav className="flex flex-col justify-center items-center gap-8 mt-20 text-center">
           {links.map((link, index) => {
             return (
               <a

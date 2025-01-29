@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 function boldString(str, substr) {
   var strRegExp = new RegExp(substr, "g");
   return str.replace(strRegExp, "<b>" + substr + "</b>");
@@ -65,6 +65,7 @@ const Contact = () => {
   const [url_box, setUrlBox] = React.useState("/fond_decouvrez_01-noir.jpg");
 
   const [currentImage, setCurrentImage] = useState(0);
+  const [currentImageTab, setCurrentImageTab] = useState(0);
 
   const images = [
     { url: "/decouvrez_animbox-01.jpg" },
@@ -73,17 +74,31 @@ const Contact = () => {
     { url: "/decouvrez_animbox-04.jpg" },
   ];
 
+  const images_tablette = [
+    { url: "/mini_tab01.png" },
+    { url: "/mini_tab02.png" },
+    { url: "/mini_tab03.png" },
+    { url: "/mini_tab04.png" },
+    { url: "/mini_tab05.png" },
+  ];
+
   const nextSlide = () => {
     setCurrentImage((next) => (next === images.length - 1 ? 0 : next + 1));
+  };
+  const nextSlideTab = () => {
+    setCurrentImageTab((next) =>
+      next === images_tablette.length - 1 ? 0 : next + 1
+    );
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
+      nextSlideTab();
     }, 2500);
 
     return () => clearInterval(interval);
-  }, [currentImage]);
+  }, [currentImage, currentImageTab]);
 
   function handleClick(e, color) {
     if (color === "white") setUrlBox("/fond_decouvrez_01-blanc.jpg");
@@ -123,6 +138,27 @@ const Contact = () => {
           className="relative bg-top  xl:bg-cover bg-no-repeat xl:h-[1344px]  xl:mt-0 "
         >
           <div className="absolute top-0 left-0 right-0 bottom-0 bg-white xl:hidden z-0"></div>
+
+          <div className="hidden xl:block h-[65px] w-[74px] absolute top-[362px] left-[50%] translate-x-[-850%]">
+            <div
+              style={{
+                backgroundImage: `url(${images_tablette[currentImageTab].url})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+              className="w-full h-full bg-center bg-cover duration-500"
+            ></div>
+            <div className="absolute h-[55px] w-[55px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-accent w-[55px] animate-pulse ">
+              <Link href="/tablette">
+                <Image
+                  src="/accueil_croix.png"
+                  width={55}
+                  height={55}
+                  alt="lien immersive box"
+                ></Image>
+              </Link>
+            </div>
+          </div>
 
           <div className="hidden absolute top-[730px] left-[50%] xxl:translate-x-[-290%] xl:translate-x-[-250%] xl:block xxl:block text-accent text-[18px] ">
             A PARTIR DE 500 € HT / MOIS
@@ -346,7 +382,7 @@ const Contact = () => {
           </div>
           <div
             key="info_tablette_appel"
-            className="absolute top-[420px] w-[1400px] left-[50%] translate-x-[-97%] text-sm  inline-flex flex-wrap justify-center content-center items-center align-middle border-1 border-black "
+            className="hidden xl:block absolute top-[420px] w-[1400px] left-[50%] translate-x-[-97%] text-sm  inline-flex flex-wrap justify-center content-center items-center align-middle border-1 border-black "
           >
             <div
               key="oipoipo"
@@ -410,7 +446,7 @@ const Contact = () => {
 
           <div
             key="info_tablette_FAQ"
-            className="relative p-10 xl:p-0 xl:absolute top-[150px] w-full  xl:w-[400px] xxl:w-[500px] left-[50%] translate-x-[-50%] xl:translate-x-[-150%] xxl:translate-x-[-150%] text-sm  "
+            className="relative p-10 xl:p-0 xl:absolute top-[100px] xl:top-[155px] w-full  xl:w-[400px] xxl:w-[400px] left-[50%] translate-x-[-50%] xl:translate-x-[-150%] xxl:translate-x-[-190%] text-sm  "
           >
             <h2 className="text-[30px]">FAQ - ImmersivBox</h2>
             <br />

@@ -12,9 +12,9 @@ export default function Footer() {
     return (
       <footer className="bg-gray-800 text-white p-8 ">
         <div className="flex flex-col xl:flex-row xl:gap-12 gap-4 px-20 pt-10 align-top items-center xl:items-start">
-          <div className="flex-1 flex align-middle justify-center content-center items-center xl:justify-start order-1 xl:order-none ">
-            ulrich@devenais3d.fr
-            <br /> +33 6 89 72 30 38
+          <div className="flex-1 flex flex-col align-middle justify-center content-center items-center xl:justify-start order-1 xl:order-none ">
+            <span>ulrich@devenais3d.fr</span>
+            <span>+33 6 89 72 30 38</span>
           </div>
           <div className="flex-1 flex flex-col items-center order-1 xl:order-none ">
             2024 - 2025

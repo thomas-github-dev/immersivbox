@@ -34,7 +34,7 @@ const Contact = () => {
 
     try {
       const response = await fetch(
-        "https://projexion3d.fr/tablette/api/contact",
+        "https://projexion3d.fr/tablette/api/contactExterne",
         {
           method: "POST",
           mode: "no-cors",
@@ -149,7 +149,12 @@ const Contact = () => {
                         placeholder="Votre numéro de téléphone"
                       />
                     </div>
-                    <input type="hidden" name="id_client" value="SAGEC_TEST" />
+                    <input
+                      type="hidden"
+                      name="email_dest"
+                      id="email_dest"
+                      value="ulrich@devenais3d.fr"
+                    />
                   </div>
                   <div className="grid w-full  items-center gap-1.5 text-accent">
                     <Label htmlFor="email">Message</Label>
